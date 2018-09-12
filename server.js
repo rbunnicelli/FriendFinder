@@ -7,7 +7,7 @@ var path = require('path');
 var app = express();
 
 //sets initial port. used in listener
-var PORT = process.env.PORT || 3000 ;
+var PORT = process.env.PORT || 8080 ;
 
 //expose public directory to use the html docs
 //app.use(express.static(path.join(_dirname, './app/public')));//
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 //routes
 //require(path.join("app/routing/apiRoutes"))(app);//
-//require(path.join("app/routing/htmlRoutes"))(app);//
+require(path.join(__dirname, "app/routing/htmlRoutes"))(app);
 
 //listener
 app.listen(PORT, function() {
