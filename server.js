@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //routes
-//require(path.join("app/routing/apiRoutes"))(app);//
+require(path.join(__dirname, "app/routing/apiRoutes"))(app);
 require(path.join(__dirname, "app/routing/htmlRoutes"))(app);
 
 //listener
