@@ -21,7 +21,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">Name (Required)</span>
             </div>
-                <input type="text" class="form-control" placeholder="First and Last Name" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" id="userName" placeholder="First and Last Name" aria-label="Username" aria-describedby="basic-addon1">
             </div>
         </div>
         <div class="col-md-12">
@@ -29,7 +29,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">Link to Photo Image (Required)</span>
             </div>
-                <input type="text" class="form-control" placeholder="Image Link" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" id="userPic" class="form-control" placeholder="Image Link" aria-label="Username" aria-describedby="basic-addon1">
         </div>
         </div>
         
@@ -154,8 +154,66 @@
                 </select>
         </div>
     <div class="col-md-12">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-primary" id="submitBtn" type="submit" name="action" value="Submit">
     </div>
+
+    <!--Modal-->
+    <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Best Match!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p id="matchName".</p>
+                  <img id="matchImg" width="500" src="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="exitModal" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     </body>
     </html>
+
+    <script type="text/javascript">
+        $("#submitBtn").on("click", function(event) {
+            event.preventDefault();
+
+        var newUser = {
+            name: $("#userName").val().trim(),
+            photo: $("#userPic").val().trim(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val(),
+            ]
+        };
+
+    console.log(newUser);
+
+    $.post("api/friends", newUser, function(data) {
+        $("#matchName").text(friends.name);
+        $("#matchImg").text("src", friends.photo);       
+});
+
+$(".modal").show();
+
+$("#exitModal").click(function() {
+    $(".modal").hide();
+})
+})
+
+</script>
