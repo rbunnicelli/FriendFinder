@@ -168,7 +168,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p id="matchName".</p>
+                  <p id="matchName"></p>
                   <img id="matchImg" width="500" src="">
                 </div>
                 <div class="modal-footer">
@@ -203,11 +203,12 @@
         };
 
     console.log(newUser);
-
+    //Post newUser info to api/friends//
     $.post("api/friends", newUser)
         .then(function(data) {
+        //gets name and photo of best match
         $("#matchName").html(data.name);
-        $("#matchImg").attr("src", data.photo);       
+        $("#matchImg").html("src", data.photo);       
         
         $(".modal").show();
 });
