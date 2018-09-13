@@ -205,8 +205,8 @@
     console.log(newUser);
 
     $.post("api/friends", newUser, function(data) {
-        $("#matchName").text(friends.name);
-        $("#matchImg").text("src", friends.photo);       
+        $("#matchName").html(friends.name);
+        $("#matchImg").attr("src", friends.photo);       
 });
 
 $(".modal").show();
