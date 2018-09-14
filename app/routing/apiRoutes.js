@@ -19,7 +19,7 @@ module.exports = function(app) {
         friends.push(user);
         res.json(user);
 
-        var scoresArray = [];
+       /* var scoresArray = [];
         var newUserScore = req.body.scores;
         var bestMatch = 0;
     for(var i=0; i<friends.length; i++) {
@@ -41,7 +41,7 @@ module.exports = function(app) {
     var bestFriendFound = friends[bestMatch];
     res.json(bestFriendFound);
 
-    friends.push(req.body);
+    friends.push(req.body);*/
     });
 }
 
