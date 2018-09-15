@@ -16,7 +16,7 @@ var PORT = process.env.PORT || 8080 ;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//code to use css
+//code to use static css file
 app.use(express.static(path.join(__dirname, './app/css')));
 
 //routes
