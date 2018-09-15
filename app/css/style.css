@@ -10,7 +10,49 @@
 .subtext {
     font-size: 30px;
 }
+
 #surveyBtn {
     background-color: black;
     color: white;
+}
+
+#surveyPage {
+    border: 2px solid black;
+    background-color: white, .5;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+#submit {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 2px dotted lightgreen;
+}
+
+.quesNum {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-top: 2px dotted lightgreen;
+}
+
+.questions {
+    font-size: 20px;
+}
+
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
+    margin-bottom: 10px;
+}
+
+#submitBtn {
+    background-color: lightgreen;   
+    color: black;
+    border-color: black;
 }
