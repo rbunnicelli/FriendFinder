@@ -1,7 +1,7 @@
 {
-  "name": "FriendFinder",
+  "name": "friend-finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Take a quiz and see who you are best matched with",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -9,6 +9,7 @@
     "path": "^0.12.7"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
