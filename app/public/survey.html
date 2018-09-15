@@ -171,7 +171,7 @@
                 </div>
                 <div class="modal-body">
                   <p id="matchName"></p>
-                  <img id="matchImg" width="500" src="">
+                  <img id="matchImg" width="400" src="">
                 </div>
                 <div class="modal-footer">
                   <button type="button" id="exitModal" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -212,7 +212,7 @@
         .then(function(data) {
         //gets name and photo of best match
         $("#matchName").html(data.name);
-        $("#matchImg").html("src", data.photo);       
+        $("#matchImg").attr("src", data.photo);       
 });
 
 $("#resultsModal").show('toggle');

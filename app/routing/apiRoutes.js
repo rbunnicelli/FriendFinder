@@ -32,15 +32,14 @@ module.exports = function(app) {
     for(var i=0; i<scoresArray.length; i++) {
         if(scoresArray[i] <= scoresArray[bestMatch]) {
             bestMatch = i;
-            /*matchImage = bestMatch[i].photo;*/
  }
     }
 
     var bestFriendFound = friends[bestMatch];
     res.json(bestFriendFound);
 
-    friends.push(user);
-    res.json({status: 'OK', bestMatch: bestMatch, matchImage: matchImage});
+    friends.push(req.body);
+    /*res.json({status: 'OK', bestMatch: bestMatch, matchImage: matchImage});*/
     });
 }
 
