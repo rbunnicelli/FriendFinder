@@ -63,3 +63,12 @@ h1 {
     color: lightgreen;  
     border-color: lightgreen;
 }
+
+#matchName {
+    text-align: center;
+    font-size: 30px;
+}
+
+#matchImageContainer {
+    text-align: center;
+}
