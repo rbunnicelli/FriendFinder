@@ -52,8 +52,14 @@ h1 {
     margin-bottom: 10px;
 }
 
-#submitBtn, #exitModal {
+#submitBtn, #retry {
     background-color: lightgreen;   
     color: black;
     border-color: black;
+}
+
+#exitModal {
+    background-color: black;
+    color: lightgreen;  
+    border-color: lightgreen;
 }
