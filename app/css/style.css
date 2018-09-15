@@ -52,7 +52,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-#submitBtn {
+#submitBtn, #exitModal {
     background-color: lightgreen;   
     color: black;
     border-color: black;
